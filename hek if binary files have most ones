@@ -1,0 +1,14 @@
+class Solution {
+public:
+    bool checkOnesSegment(string s) {
+        bool seenzone= false;
+        
+        for(char c: s){
+            if(c=='0'){
+                seenzone= true;
+            }
+            else if(seenzone) return false;
+        }  
+        return true;
+          }
+};
